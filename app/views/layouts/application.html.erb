@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SimpleMessagesApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="ui grid">
+    <div class="row">
+      <div class="fourteen wide centered column">
+        <h2 class="ui header">
+          <i class="mail icon"></i>
+          <div class="content">
+            Simple Messaging App
+          </div>
+        </h2>
+        <div class="ui purple inverted menu">
+          <i class="home icon"></i><%= link_to "Home", root_path, class: "item" %>
+            <% if current_user %>
+              <%= link_to "Mailbox", conversations_path, class: "item" %>
+              <div class="right menu">
+                <%= link_to 'Sign Out', signout_path, class: "item" %>
+              </div>
+            <% else %>
+              <div class="right menu">
+                <%= link_to 'Sign Up', signup_path, class: "item" %>
+                <%= link_to "Sign-In", signin_path, class: "item" %>
+              </div>
+            <% end %>
+        </div>
+
+        <%= yield %>
+      </div>
+    </div>
+  </div>
+
+
+
+</body>
+</html>

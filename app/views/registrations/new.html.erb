@@ -1,0 +1,48 @@
+<div class="ui segment">
+  <h1>Sign Up</h1>
+</div>
+
+<div class="ui form segment">
+  <%= form_for @user, url: signup_path, html: {class: "ui form", id: "signup-form"} do |f| %>
+
+  <%= render 'shared/errors', object: @user %>
+
+    <div class="three fields">
+      <div class="field">
+        <%= f.label :first_name %>
+        <div class="field">
+          <%= f.text_field :first_name %>
+        </div>
+      </div>
+      <div class="field">
+        <%= f.label :last_name %>
+        <div class="field">
+          <%= f.text_field :last_name %>
+        </div>
+      </div>
+      <div class="field">
+        <%= f.label :email %>
+        <div class="field">
+          <%= f.email_field :email %>
+        </div>
+      </div>
+    </div>
+
+    <div class="field">
+      <%= f.label :password %>
+      <div class="field">
+        <%= f.password_field :password %>
+      </div>
+    </div>
+
+    <div class="field">
+      <%= f.label :password_confirmation %>
+      <div class="field">
+        <%= f.password_field :password_confirmation %>
+      </div>
+    </div>
+
+    <%= f.submit "Submit", class: "ui submit button" %>
+
+  <% end  %>
+</div>

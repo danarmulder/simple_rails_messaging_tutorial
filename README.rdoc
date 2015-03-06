@@ -1,0 +1,22 @@
+This is a Simple Messaging Application built on rails. With this app you will have 
+ a hand rolled user system and the users will have the ability to message each other
+ within the app.
+
+I'm using Rails '4.1.8' and semantic UI for styling. I used this gem for installing semantic:
+  gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass', branch: 'v1.0beta'
+
+Directions for this repo in the command line:
+git clone git@github.com:danarmulder/simple_rails_messaging_tutorial.git
+
+cd simple_rails_messaging_tutorial
+
+bundle
+
+rake db:create db:migrate db:seed
+
+rails s
+
+A more detailed explanation can be found at:
+https://medium.com/@danamulder/tutorial-create-a-simple-messaging-system-on-rails-d9b94b0fbca1
+
+Please let me know if you have any issues or questions, happy coding!
